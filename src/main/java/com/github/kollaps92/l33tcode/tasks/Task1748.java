@@ -1,4 +1,4 @@
-package com.github.kollaps92.l33tcode;
+package com.github.kollaps92.l33tcode.tasks;
 
 /*
 You are given an integer array nums. The unique elements of an array are the elements that appear exactly once in the array.

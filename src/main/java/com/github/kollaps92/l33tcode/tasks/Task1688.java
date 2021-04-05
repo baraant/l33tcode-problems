@@ -1,4 +1,4 @@
-package com.github.kollaps92.l33tcode;
+package com.github.kollaps92.l33tcode.tasks;
 
 public class Task1688 {
 

@@ -1,5 +1,6 @@
-package com.github.kollaps92.l33tcode;
+package com.github.kollaps92.l33tcode.tasks;
 
+import com.github.kollaps92.l33tcode.tasks.Task1748;
 import org.junit.jupiter.api.Test;
 
 public class Task1748Tests {

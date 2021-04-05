@@ -1,4 +1,4 @@
-package com.github.kollaps92.l33tcode;
+package com.github.kollaps92.l33tcode.tasks;
 
 /*
 Given an integer n, return any array containing n unique integers such that they add up to 0.

@@ -1,4 +1,4 @@
-package com.github.kollaps92.l33tcode;
+package com.github.kollaps92.l33tcode.tasks;
 
 /*
 Given a non-empty array of decimal digits representing a non-negative integer, increment one to the integer.
