@@ -20,7 +20,7 @@ import java.util.List;
  */
 
 class BinaryTreePreorderTraversal {
-    public List<Integer> preorderTraversal(MyTreeNode root) {
+    public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
 
         getNodeValueAndFindNext(root, result);
@@ -28,7 +28,7 @@ class BinaryTreePreorderTraversal {
         return result;
     }
 
-    private void getNodeValueAndFindNext(MyTreeNode current, List<Integer> result) {
+    private void getNodeValueAndFindNext(TreeNode current, List<Integer> result) {
         if (current != null) {
             result.add(current.val);
 

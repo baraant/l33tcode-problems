@@ -1,19 +1,19 @@
 package com.github.kollaps92.l33tcode.data_structure_tree;
 
 
-public class MyTreeNode {
+public class TreeNode {
     int val;
-    MyTreeNode left;
-    MyTreeNode right;
+    TreeNode left;
+    TreeNode right;
 
-    MyTreeNode() {
+    TreeNode() {
     }
 
-    MyTreeNode(int val) {
+    TreeNode(int val) {
         this.val = val;
     }
 
-    MyTreeNode(int val, MyTreeNode left, MyTreeNode right) {
+    TreeNode(int val, TreeNode left, TreeNode right) {
         this.val = val;
         this.left = left;
         this.right = right;
