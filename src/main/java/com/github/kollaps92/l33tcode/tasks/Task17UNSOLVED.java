@@ -32,7 +32,7 @@ digits[i] is a digit in the range ['2', '9'].
 import java.util.ArrayList;
 import java.util.List;
 
-public class Task17unsolved {
+public class Task17UNSOLVED {
     // READ ABOUT BINARY TREES
     public List<String> letterCombinations(String digits) {
 
