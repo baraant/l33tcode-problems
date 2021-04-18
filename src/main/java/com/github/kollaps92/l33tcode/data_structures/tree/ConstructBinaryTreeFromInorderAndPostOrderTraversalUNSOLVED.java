@@ -1,4 +1,4 @@
-package com.github.kollaps92.l33tcode.data_structure_tree;
+package com.github.kollaps92.l33tcode.data_structures.tree;
 
 /*
     Construct Binary Tree from Inorder and Postorder Traversal

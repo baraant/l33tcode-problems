@@ -1,4 +1,4 @@
-package com.github.kollaps92.l33tcode.data_structure_array;
+package com.github.kollaps92.l33tcode.data_structures.array;
 
 /*
     Duplicate Zeros
