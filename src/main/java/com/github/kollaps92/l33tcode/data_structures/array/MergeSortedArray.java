@@ -29,20 +29,51 @@ nums2.length == n
 -109 <= nums1[i], nums2[i] <= 109
 */
 
+/*
+ * My Algorithm: run step-by-step through each array and shift values if current value of num2 < num1;
+ * Otherwise - do nothing
+ * */
+
 public class MergeSortedArray {
-//    public void merge(int[] nums1, int m, int[] nums2, int n) {
-//        if (n == 0) {
-//            return;
-//        }
-//
-//        for (int i = 0; i < nums1.length; i++) {
-//            if (j < m) {
-//
-//            }
-//        }
-//
-//        while (true) {
-//
-//        }
-//    }
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        if (n == 0) {
+            return;
+        }
+
+        int nums2CurrentIndex = 0;
+        int itemsLeftInM = m;
+        int i = 0;
+
+        while (i < nums1.length) {
+            if (nums2CurrentIndex == nums2.length) {
+                return;
+            }
+
+            if (itemsLeftInM == 0) {
+                nums1[i] = nums2[nums2CurrentIndex];
+                nums2CurrentIndex++;
+                i++;
+                continue;
+            }
+
+            if (nums1[i] > nums2[nums2CurrentIndex]) {
+                makeAShiftToTheRightIncludingIndex(nums1, i, n - nums2CurrentIndex);
+                nums1[i] = nums2[nums2CurrentIndex];
+                nums2CurrentIndex++;
+            } else {
+                itemsLeftInM--;
+            }
+
+            i++;
+        }
+    }
+
+    private void makeAShiftToTheRightIncludingIndex(int[] arr, int index, int shift) {
+        int i = arr.length - shift;
+
+        while (index < i) {
+            arr[i] = arr[i - 1];
+            i--;
+        }
+    }
 }
