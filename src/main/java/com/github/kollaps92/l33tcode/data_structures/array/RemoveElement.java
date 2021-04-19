@@ -43,7 +43,7 @@ Constraints:
 0 <= nums.length <= 100
 0 <= nums[i] <= 50
 0 <= val <= 100
-* */
+*/
 
 // my algo: go through the array from left to right. If we find that val - replace with the non-val value from the end and cut the length
 
