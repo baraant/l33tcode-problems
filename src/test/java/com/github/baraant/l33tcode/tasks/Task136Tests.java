@@ -2,8 +2,6 @@ package com.github.baraant.l33tcode.tasks;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 public class Task136Tests {
 
     @Test
