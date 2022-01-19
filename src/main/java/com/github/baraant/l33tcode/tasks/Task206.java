@@ -27,24 +27,6 @@ Constraints:
 The number of nodes in the list is the range [0, 5000].
 -5000 <= Node.val <= 5000
 */
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
-
 public class Task206 {
     public ListNode reverseList(ListNode head) {
         return reverseStep(null, head);
