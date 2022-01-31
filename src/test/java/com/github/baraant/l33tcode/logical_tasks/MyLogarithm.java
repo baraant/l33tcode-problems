@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 /*
 Basic properties of logarithms
 log_a(x) = ln(x) / ln(a) = lg(x) / ln(a)
+log_a(x) + log_a(y) = log_a(x*y)
+log_a(x) - log_a(y) = log_a(x/y)
+log_a(x^n) = n * log_a(x)
 */
 public class MyLogarithm {
 
