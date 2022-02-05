@@ -1,16 +1,11 @@
 package com.github.baraant.l33tcode.tasks;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
 /*
 5984. Minimum Sum of Four Digit Number After Splitting Digits
-User Accepted:0
-User Tried:0
-Total Accepted:0
-Total Submissions:0
 Difficulty:Easy
 You are given a positive integer num consisting of exactly four digits. Split num into two new integers new1 and new2 by using the digits found in num. Leading zeros are allowed in new1 and new2, and all the digits found in num must be used.
 
