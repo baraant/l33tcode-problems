@@ -56,4 +56,5 @@ public class Task5986Unsolved {
     public int minCostSetTime(int startAt, int moveCost, int pushCost, int targetSeconds) {
         return 0;
     }
+
 }
