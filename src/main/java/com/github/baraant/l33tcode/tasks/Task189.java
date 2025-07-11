@@ -33,51 +33,21 @@ Constraints:
 */
 public class Task189 {
     public void rotate(int[] nums, int k) {
+        int n = nums.length;
+        k = k % n;
 
-        int length = nums.length;
-        k = k % length;
-
-        if (k == 0) {
-            return;
-        }
-
-        int gcd = gcdByEuclidsAlgorithm(k, length);
-
-        if (gcd == 1) {
-            rotateExactTimes(nums, 0, k, length);
-        } else {
-            for (int i = 0; i < gcd; i++) {
-                rotateExactTimes(nums, i, k, length / gcd);
-            }
-        }
-
+        reverse(nums, 0, n - 1);
+        reverse(nums, 0, k - 1);
+        reverse(nums, k, n - 1);
     }
 
-    private void rotateExactTimes(int[] array, int initialIndex, int rotationShift, int times) {
-
-        int length = array.length;
-        int i = initialIndex;
-        int j;
-        int buffer;
-        int rotatedValue = array[initialIndex];
-
-        while (times > 0) {
-            j = (i + rotationShift) % length;
-
-            buffer = array[j];
-            array[j] = rotatedValue;
-            rotatedValue = buffer;
-
-            i = j;
-            times--;
+    private void reverse(int[] nums, int start, int end) {
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
         }
     }
-
-    private int gcdByEuclidsAlgorithm(int n1, int n2) {
-        if (n2 == 0) {
-            return n1;
-        }
-        return gcdByEuclidsAlgorithm(n2, n1 % n2);
-    }
-
 }
