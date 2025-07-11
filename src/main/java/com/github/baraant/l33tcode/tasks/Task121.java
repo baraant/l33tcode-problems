@@ -30,18 +30,18 @@ Constraints:
 */
 public class Task121 {
     public int maxProfit(int[] prices) {
+
         int maxProfit = 0;
-        int startIndex = 0;
+        int startPrice = prices[0];
 
-        if (prices.length == 0) {
-            return 0;
-        }
+        for (int price: prices) {
+            if (price < startPrice) {
+                startPrice = price;
+                continue;
+            }
 
-        for (int i = 1; i < prices.length; i++) {
-            if (prices[i] > prices[startIndex]) {
-                maxProfit = Math.max(maxProfit, prices[i] - prices[startIndex]);
-            } else {
-                startIndex = i;
+            if (price > startPrice) {
+                maxProfit = Math.max(maxProfit, price - startPrice);
             }
         }
 
