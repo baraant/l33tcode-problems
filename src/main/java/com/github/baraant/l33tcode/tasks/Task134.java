@@ -1,8 +1,5 @@
 package com.github.baraant.l33tcode.tasks;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /*
 134. Gas Station
 Medium
