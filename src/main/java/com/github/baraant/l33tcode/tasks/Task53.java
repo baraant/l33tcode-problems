@@ -30,28 +30,20 @@ Constraints:
 */
 public class Task53 {
     public int maxSubArray(int[] nums) {
-        int curIndex = 0;
-        int maxSum = nums[curIndex];
-        int buffer;
 
-        while (curIndex < nums.length) {
-            buffer = 0;
+        int curSum = 0;
+        int maxSum = Integer.MIN_VALUE;
+        for (int i = 0; i<= nums.length -1; i++) {
 
-            while (curIndex < nums.length) {
+            curSum += nums[i];
 
-                buffer += nums[curIndex];
-                if (buffer > maxSum) {
-                    maxSum = buffer;
-                }
-
-                curIndex++;
-
-                if (buffer < 0) {
-                    break;
-                }
+            if (curSum <= 0) {
+                curSum = 0;
+                maxSum = Math.max(maxSum, nums[i]);
+            } else {
+                maxSum = Math.max(maxSum, curSum);
             }
         }
-
 
         return maxSum;
     }
