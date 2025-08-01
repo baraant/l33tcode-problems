@@ -1,6 +1,9 @@
 package com.github.baraant.l33tcode.tasks;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 /*
 118. Pascal's Triangle
