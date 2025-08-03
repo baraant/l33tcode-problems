@@ -36,21 +36,21 @@ public class Task3 {
             return 0;
         }
 
-        int i = 0;
-        int j = 0;
+        int left = 0;
+        int right = 0;
         int max = 0;
         Map<Character, Integer> charToPos = new HashMap<>();
 
-        while (j < s.length()) {
-            Character curChar = s.charAt(j);
+        while (right < s.length()) {
+            Character curChar = s.charAt(right);
 
             if (charToPos.containsKey(curChar)) {
-                i = Math.max(i, charToPos.get(curChar) + 1);
+                left = Math.max(left, charToPos.get(curChar) + 1);
             }
 
-            charToPos.put(curChar, j);
-            max = Math.max(max, j - i + 1);
-            j++;
+            charToPos.put(curChar, right);
+            max = Math.max(max, right - left + 1);
+            right++;
         }
 
         return max;
