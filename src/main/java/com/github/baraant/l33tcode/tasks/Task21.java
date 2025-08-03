@@ -38,26 +38,23 @@ public class Task21 {
         ListNode resultHead = new ListNode(0, null);
         ListNode resultCur = resultHead;
 
-        while (!(list1Cur == null && list2Cur == null)) {
+        while (list1Cur != null || list2Cur != null) {
             if (list1Cur == null) {
                 resultCur.next = list2Cur;
                 list2Cur = list2Cur.next;
-                resultCur = resultCur.next;
             } else if (list2Cur == null) {
                 resultCur.next = list1Cur;
                 list1Cur = list1Cur.next;
-                resultCur = resultCur.next;
             } else {
                 if (list1Cur.val <= list2Cur.val) {
                     resultCur.next = list1Cur;
                     list1Cur = list1Cur.next;
-                    resultCur = resultCur.next;
                 } else {
                     resultCur.next = list2Cur;
                     list2Cur = list2Cur.next;
-                    resultCur = resultCur.next;
                 }
             }
+            resultCur = resultCur.next;
         }
 
         return resultHead.next;
